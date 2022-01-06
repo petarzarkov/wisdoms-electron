@@ -1,0 +1,26 @@
+{
+  "name": "wisdoms-app",
+  "productName": "WisdomsApp",
+  "version": "1.0.0",
+  "description": "An app for wisdoms",
+  "main": "app.js",
+  "scripts": {
+    "start:dev": "set IS_DEV=true&& electron .",
+    "start": "electron . WisdomsApp",
+    "build": "npx electron-packager . --icon=\"images/pepo.ico\" --overwrite --out=build --executableName=wisdoms --ignore=\"(.gitignore|.npmrc|pack.js)\"",
+    "pack": "node pack.js --dir=build/WisdomsApp-win32-x64 --out=build/WisdomsApp.zip"
+  },
+  "keywords": [
+    "wisdoms",
+    "app",
+    "electron"
+  ],
+  "author": "Petar Zarkov",
+  "license": "ISC",
+  "devDependencies": {
+    "electron-packager": "15.4.0",
+    "electron": "16.0.6",
+    "electron-reload": "2.0.0-alpha.1",
+    "zip-a-folder": "1.1.3"
+  }
+}
